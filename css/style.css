@@ -16,20 +16,21 @@ body{
   font-weight: 100;
   text-decoration: none;
   color: #fff;
-  padding: .1rem .1rem;
+  padding: .1rem .8rem;
   border: none;
   border-radius: 20px;
   text-align: center;
-  width: 4.8rem;
   display: inline-block;
 }
 
 .btn-primary{
-  background-image: linear-gradient(to right, #be28ff , #9817fe);
+  padding: .1rem 1.5rem;
+  background: linear-gradient(to right, #be28ff , #9817fe);
+
 }
 
 .btn-secondary{
-  background-image: linear-gradient( to right, #ff8f46, #f86708);
+  background: linear-gradient( to right, #ff8f46, #f86708);
 }
 
 #background{
@@ -44,7 +45,15 @@ body{
   height: 100vh;
   z-index: -1;
   position: fixed;
-  background: rgba(0, 3, 167, 0.808);
+  background: rgba(0, 2, 104, 0.911);
+}
+
+/* Straight Line */
+.border-right{
+  height: 100%;
+  border-right: 1px solid #fff;
+  width: 1px;
+  margin: 0 .7rem;
 }
 
 /* Header */
@@ -58,7 +67,7 @@ body{
   padding: .8rem 5rem;
   height: 3rem;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 #main-header .main-header-1{
@@ -72,14 +81,6 @@ body{
   align-items: center;
   justify-content: space-between;
   width: 10.5rem;
-}
-
-/* Straight Line */
-#main-header .main-header-1 .border-right{
-  height: 100%;
-  border-right: 1px solid #fff;
-  width: 1px;
-  margin: 0 .7rem;
 }
 
 /* Social Icons */
@@ -106,18 +107,21 @@ body{
 
 /* Main Body */
 #main-body{
+  font-family: Arial, Helvetica, sans-serif;
   padding-top: 3.5rem;
   background: #22242c;
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
+  height: 90rem;
+  width: 100%;
 }
 
 #main-body .container{
-  margin: 0 4rem;
-  margin-bottom: 3rem;
+  margin: 3rem 4rem;
 }
 
 #main-body .container .menu{
+  font-family: 'Bebas Neue', cursive;
   width: 100%;
   display: flex;
   align-items: center;
@@ -171,6 +175,156 @@ body{
   font-size: 1.1rem;
 }
 
+/* Articles */
+#main-body .actual-menu{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem;
+  min-width: 85%;
+  max-width: 90%;
+  margin: auto;
+  height: 60rem;
+}
+
+#main-body .actual-menu .article{
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 3px 10px #07010cb0;
+}
+
+#main-body .actual-menu .art-1{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+#main-body .actual-menu .article img{
+  width: 100%;
+  height: 100%;
+  transition: transform 300ms;
+  position: absolute;
+}
+
+#main-body .actual-menu .article .img-overlay{
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.863));
+  transition: background 300ms;
+}
+
+#main-body .actual-menu .article:hover{
+  cursor: pointer;
+}
+
+#main-body .actual-menu .article:hover img{
+  transform: scale(1.03);
+}
+
+.category,
+.title,
+.date-author{
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  font-weight: 100;
+}
+
+.category{
+  bottom: 45%;
+  left: 7%;
+  font-size: .9rem;
+  padding: .3rem .7rem;
+  border-radius: 15px;
+  background: linear-gradient(to right, #be28ff , #9817fe);;
+}
+
+.title{
+  bottom: 20%;
+  left: 7%;
+  font-size: 1.3rem
+}
+
+.date-author{
+  bottom: 5%;
+  left: 7%;
+  font-size: .9rem;
+}
+
+.art-1 .category{
+  bottom: 22%;
+  left: 5%;
+}
+
+.art-1 .title{
+  bottom: 12%;
+  left: 5%;
+}
+
+.art-1 .date-author{
+  left: 5%;
+}
+
+.art-8 .category{
+  bottom: 50%;
+}
+
+/* Rickroll */
+#main-body .actual-menu .article .art-2 .rickroll-2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#main-body .actual-menu .art-2 .rickroll-1{
+  transition: all 1s;
+}
+
+#main-body .actual-menu .art-2:hover .rickroll-1{
+  transform: translateY(-300px);
+}
+
+/* Low Buttons */
+#main-body .low-buttons{
+  margin: 2rem 4rem;
+  font-weight: 100;
+  font-size: .3rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  display: flex;
+}
+
+#main-body .low-buttons .btn-primary,
+#main-body .low-buttons .btn-secondary{
+  padding: .7rem .8rem;
+  font-size: .8rem;
+  margin: 1rem .2rem;
+}
+
+#main-body .low-buttons .btn-primary{
+  box-shadow: 0 3px 10px #9a17fe86;
+  transition: all 300ms;
+}
+
+#main-body .low-buttons .btn-secondary{
+  box-shadow: 0 3px 10px #f8680886;
+  transition: all 300ms;
+}
+
+#main-body .low-buttons .btn-primary:hover,
+#main-body .low-buttons .btn-secondary:hover{
+  box-shadow: 0 3px 10px #07010c86;
+}
+
 /* Footer */
 #main-footer{
   width: 100%;
@@ -183,6 +337,7 @@ body{
   flex-direction: column;
 }
 
+/* Footer Logo */
 #main-footer .container .footer-logo{
   width: 200px;
   margin: 6rem auto 3rem auto;
@@ -198,6 +353,7 @@ body{
   transform: scale(1.1);
 }
 
+/* Footer Text */
 #main-footer .container .footer-text{
   margin: auto;
   font-size: 1.5rem;
@@ -264,6 +420,79 @@ body{
   letter-spacing: 2px;
 }
 
+#main-footer .container .additional-stuff{
+  display: flex;
+  margin: auto;
+  margin-bottom: 3rem;
+  height: 1.4rem;
+}
+
+#main-footer .container .additional-stuff a,
+#main-footer .container .additional-stuff h3{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 100;
+  padding: 0 .5rem;
+  letter-spacing: 1px;
+}
+
+#main-footer .container .additional-stuff h3 .fas{
+  font-size: 1.3rem;
+}
+
+#main-footer .container .additional-stuff h3 .fas:hover{
+  cursor: pointer;
+}
+
+@media(max-width: 1270px){
+  .main-text,
+  
+  .main-header-1 .border-right{
+    display: none;
+  }
+
+.itm-3, .itm-7{
+    display: none;
+  }
+
+}
+
+@media(max-width: 970px){
+  .itm-1, .itm-2{
+    display: none;
+  }
+}
+
+@media(max-width: 900px){
+  #main-body .actual-menu{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 740px){
+  .itm-6, .item-2{
+    display: none;
+  }
+
+  #main-body .actual-menu{
+    grid-template-columns: 1fr;
+  }
+
+  #main-body .actual-menu .art-1{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #main-body .actual-menu .art-1 .title{
+    bottom: 20%;
+  }
+
+  #main-body .actual-menu .art-1 .category{
+    bottom: 45%;
+  }
+}
+
 /* Media Qureies */
 @media(max-width: 500px){
   #main-header .main-header-1{
@@ -273,11 +502,24 @@ body{
   #main-header{
     justify-content: center;
   }
-}
 
-@media(max-width: 1200px){
-  .main-text,
-  .border-right{
+  #main-body .container{
     display: none;
+  }
+
+  #main-body .low-buttons{
+    flex-direction: column;
+  }
+
+  #background{
+    display: none;
+  }
+
+  #background-overlay{
+    display: none;
+  }
+
+  body{
+    background: rgb(0, 2, 94);
   }
 }
