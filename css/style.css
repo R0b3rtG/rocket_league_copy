@@ -34,14 +34,14 @@ body{
 }
 
 #background{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: -2;
   position: fixed;
 }
 
 #background-overlay{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: -1;
   position: fixed;
@@ -58,7 +58,6 @@ body{
 
 /* Header */
 #main-header{
-  position: fixed;
   background: #1e1f26;
   color: #fff;
   display: flex;
@@ -360,6 +359,7 @@ body{
   color: #fff;
   letter-spacing: 1px;
   font-weight: 100;
+  text-align: center;
 }
 
 #main-footer .container .online-players{
@@ -369,6 +369,7 @@ body{
   flex-direction: column;
   border-radius: 15px;
   padding: .8rem 3.6rem;
+  text-align: center;
 }
 
 #main-footer .container .online-players:hover{
@@ -398,9 +399,10 @@ body{
 
 #main-footer .container .copyright-1,
 #main-footer .container .copyright-2{
-  margin: auto;
+  margin: .5rem auto;
   color: #fff;
   font-weight: 100;
+  text-align: center;
 }
 
 #main-footer .container .other-buttons{
@@ -425,6 +427,7 @@ body{
   margin: auto;
   margin-bottom: 3rem;
   height: 1.4rem;
+  width: 100%;
 }
 
 #main-footer .container .additional-stuff a,
@@ -521,5 +524,32 @@ body{
 
   body{
     background: rgb(0, 2, 94);
+  }
+
+  #main-footer .container .footer-text{
+    font-size: 1.2rem
+  }
+
+  #main-footer .container .other-buttons{
+    flex-direction: column;
+  }
+
+  #main-footer .container .other-buttons .btn{
+    margin: .4rem 0;
+  }
+
+  #main-footer .container .additional-stuff{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #main-footer .container .additional-stuff .border-right{
+    display: none;
+  }
+
+  #main-footer .container .additional-stuff a,
+  #main-footer .container .additional-stuff h3{
+    margin-top: .5rem;
+    font-size: 1rem;
   }
 }
